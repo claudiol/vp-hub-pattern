@@ -1,0 +1,18 @@
+global:
+  pattern: vp-hub-pattern
+  singleArgoCD: true
+  secretLoader:
+    disabled: true
+#
+# Needed to ensure that the ACM instance is not managed.
+# We will be using the ACM Global Hub to manage the 
+# ACM in this pattern.
+acm:
+  mch_spec:
+    disableHubSelfManagement: true
+
+main:
+  clusterGroupName: hub
+  multiSourceConfig:
+    enabled: true
+    clusterGroupChartVersion: 0.9.*

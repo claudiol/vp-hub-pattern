@@ -1,0 +1,6 @@
+clusterGroup:
+  name: hub
+  namespaces:
+    vp-hub-pattern:
+  subscriptions: {}
+  applications: {}
